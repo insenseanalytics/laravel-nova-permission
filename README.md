@@ -1,4 +1,4 @@
-# A Laravel Nova tool for the Spatie Permission library
+# A Laravel Nova tool for the Spatie Permission package
 
 [![Packagist License](https://poser.pugx.org/insenseanalytics/laravel-nova-permission/license.png)](http://choosealicense.com/licenses/mit/)
 [![Latest Stable Version](https://poser.pugx.org/insenseanalytics/laravel-nova-permission/version.png)](https://packagist.org/packages/insenseanalytics/laravel-nova-permission)
@@ -12,7 +12,7 @@ This [Nova](https://nova.laravel.com) tool lets you:
 <img alt="screenshot of the backup tool" src="https://insenseanalytics.github.io/public-assets/laravel-nova-permission/nova-permission-screenshot.png" />
 
 ## Requirements & Dependencies
-There are no PHP dependencies except the Laravel Nova package and the Spatie Permission library.
+There are no PHP dependencies except the Laravel Nova package and the [Spatie Permission](https://github.com/spatie/laravel-permission) package.
 
 ## Installation
 You can install this tool into a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
