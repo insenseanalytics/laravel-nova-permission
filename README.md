@@ -8,7 +8,7 @@ This [Nova](https://nova.laravel.com) tool lets you:
 <img alt="screenshot of the backup tool" src="https://insenseanalytics.github.io/public-assets/laravel-nova-permission/nova-permission-screenshot.png" />
 
 ## Requirements & Dependencies
-There are no PHP dependencies except the Laravel Nova package and the [Spatie Permission](https://github.com/spatie/laravel-permission) package.
+There are no PHP dependencies except the [Laravel Nova](https://nova.laravel.com) package and the [Spatie Permission](https://github.com/spatie/laravel-permission) package.
 
 ## Installation
 You can install this tool into a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
