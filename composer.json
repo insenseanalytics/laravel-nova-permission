@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Insenseanalytics\\LaravelNovaPermission\\ToolServiceProvider"
+                "Insenseanalytics\\LaravelNovaPermission\\NovaPermissionServiceProvider"
             ]
         }
     },
