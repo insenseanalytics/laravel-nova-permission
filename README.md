@@ -8,7 +8,7 @@ This [Nova](https://nova.laravel.com) tool lets you:
 - manage roles and permissions on the Nova dashboard
 - use permissions based authorization for Nova resources
 
-## Nova Dashboard Screenshots
+## Screenshots
 <img alt="screenshot of the backup tool" src="https://insenseanalytics.github.io/public-assets/laravel-nova-permission/nova-permission-screenshot.png" />
 
 ## Requirements & Dependencies
