@@ -52,8 +52,8 @@ public function fields(Request $request)
 {
     return [
         // ...
-        MorphToMany::make('Roles', 'roles', \InsenseAnalytics\LaravelNovaPermission\Role::class),
-        MorphToMany::make('Permissions', 'permissions', \InsenseAnalytics\LaravelNovaPermission\Permission::class),
+        MorphToMany::make('Roles', 'roles', \Insenseanalytics\LaravelNovaPermission\Role::class),
+        MorphToMany::make('Permissions', 'permissions', \Insenseanalytics\LaravelNovaPermission\Permission::class),
     ];
 }
 ```
