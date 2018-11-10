@@ -39,7 +39,7 @@ public function tools()
 }
 ```
 
-Finally, add `MorphToMany` fields to you `app/Nova/User` resource:
+Next, add `MorphToMany` fields to you `app/Nova/User` resource:
 
 ```php
 use Laravel\Nova\Fields\MorphToMany;
@@ -52,6 +52,20 @@ public function fields(Request $request)
         MorphToMany::make('Permissions', 'permissions', \Insenseanalytics\LaravelNovaPermission\Permission::class),
     ];
 }
+```
+
+Finally, add the `ForgetCachedPermissions` class to your `config/nova.php` middleware like so:
+
+```php
+// in config/nova.php
+'middleware' => [
+	'web',
+	Authenticate::class,
+	DispatchServingNovaEvent::class,
+	BootTools::class,
+	Authorize::class,
+	\Insenseanalytics\LaravelNovaPermission\ForgetCachedPermissions::class,
+],
 ```
 
 ## Using Custom Role/Permission Resource Classes
