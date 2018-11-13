@@ -2,6 +2,7 @@
 
  [![License](https://poser.pugx.org/insenseanalytics/laravel-nova-permission/license)](https://packagist.org/packages/insenseanalytics/laravel-nova-permission)
  [![Latest Stable Version](https://poser.pugx.org/insenseanalytics/laravel-nova-permission/v/stable)](https://packagist.org/packages/insenseanalytics/laravel-nova-permission)
+ [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/insenseanalytics/laravel-nova-permission/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/insenseanalytics/laravel-nova-permission/?branch=master)
  [![Total Downloads](https://poser.pugx.org/insenseanalytics/laravel-nova-permission/downloads)](https://packagist.org/packages/insenseanalytics/laravel-nova-permission)
 
 This [Nova](https://nova.laravel.com) tool lets you:
