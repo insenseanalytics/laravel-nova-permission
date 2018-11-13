@@ -1,6 +1,7 @@
 # A Laravel Nova tool for the Spatie Permission package
 
  [![License](https://poser.pugx.org/insenseanalytics/laravel-nova-permission/license)](https://packagist.org/packages/insenseanalytics/laravel-nova-permission)
+ [![Latest Stable Version](https://poser.pugx.org/insenseanalytics/laravel-nova-permission/v/stable)](https://packagist.org/packages/insenseanalytics/laravel-nova-permission)
  [![Total Downloads](https://poser.pugx.org/insenseanalytics/laravel-nova-permission/downloads)](https://packagist.org/packages/insenseanalytics/laravel-nova-permission)
 
 This [Nova](https://nova.laravel.com) tool lets you:
