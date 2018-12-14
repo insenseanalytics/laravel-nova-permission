@@ -40,18 +40,18 @@ trait RoleResourceTrait
 		return [
 			ID::make()->sortable(),
 
-			Text::make('Name', 'name')
+			Text::make(__('laravel-nova-permission::roles.name'), 'name')
 				->rules(['required', 'string', 'max:255'])
 				->creationRules('unique:' . config('permission.table_names.roles'))
 				->updateRules('unique:' . config('permission.table_names.roles') . ',name,{{resourceId}}'),
 
-			Select::make('Guard Name', 'guard_name')
+			Select::make(__('laravel-nova-permission::roles.guard_name'), 'guard_name')
 				->options($guardOptions->toArray())
 				->rules(['required', Rule::in($guardOptions)]),
 
-			DateTime::make('Created At', 'created_at')->exceptOnForms(),
+			DateTime::make(__('laravel-nova-permission::roles.created_at'), 'created_at')->exceptOnForms(),
 
-			DateTime::make('Updated At', 'updated_at')->exceptOnForms(),
+			DateTime::make(__('laravel-nova-permission::roles.updated_at'), 'updated_at')->exceptOnForms(),
 
 			BelongsToMany::make($permissionResource::label(), 'permissions', $permissionResource)->searchable(),
 

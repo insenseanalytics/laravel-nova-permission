@@ -12,6 +12,11 @@ class NovaPermissionServiceProvider extends ServiceProvider
 	public function boot()
 	{
 		$this->loadViewsFrom(__DIR__ . '/../resources/views', 'laravel-nova-permission');
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'laravel-nova-permission');
+
+        $this->publishes([
+            __DIR__.'/../resources/lang' => resource_path('lang/vendor/laravel-nova-permission'),
+        ], 'laravel-nova-permission-lang');
 	}
 
 	/**

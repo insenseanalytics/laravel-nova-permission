@@ -7,7 +7,9 @@ use Spatie\Permission\Models\Permission as SpatiePermission;
 
 class Permission extends Resource
 {
-	use PermissionResourceTrait;
+	use PermissionResourceTrait,TranslationHandelTrait {
+	    TranslationHandelTrait::applyFilters insteadof PermissionResourceTrait;
+    }
 
 	/**
 	 * The model the resource corresponds to.
@@ -38,4 +40,25 @@ class Permission extends Resource
 	 * @var bool
 	 */
 	public static $displayInNavigation = false;
+
+    /**
+     * Get the displayable label of the resource.
+     *
+     * @return string
+     */
+    public static function label()
+    {
+        return __('laravel-nova-permission::resources.Permissions');
+    }
+
+    /**
+     * Get the displayable singular label of the resource.
+     *
+     * @return string
+     */
+    public static function singularLabel()
+    {
+        return __('laravel-nova-permission::resources.Permission');
+    }
+
 }

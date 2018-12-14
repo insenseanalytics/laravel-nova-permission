@@ -7,7 +7,9 @@ use Spatie\Permission\Models\Role as SpatieRole;
 
 class Role extends Resource
 {
-	use RoleResourceTrait;
+	use RoleResourceTrait, TranslationHandelTrait {
+        TranslationHandelTrait::applyFilters insteadof RoleResourceTrait;
+    }
 
 	/**
 	 * The model the resource corresponds to.
@@ -38,4 +40,24 @@ class Role extends Resource
 	 * @var bool
 	 */
 	public static $displayInNavigation = false;
+
+    /**
+     * Get the displayable label of the resource.
+     *
+     * @return string
+     */
+    public static function label()
+    {
+        return __('laravel-nova-permission::resources.Roles');
+    }
+
+    /**
+     * Get the displayable singular label of the resource.
+     *
+     * @return string
+     */
+    public static function singularLabel()
+    {
+        return __('laravel-nova-permission::resources.Role');
+    }
 }

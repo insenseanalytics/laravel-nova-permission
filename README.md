@@ -72,6 +72,12 @@ Finally, add the `ForgetCachedPermissions` class to your `config/nova.php` middl
 	\Insenseanalytics\LaravelNovaPermission\ForgetCachedPermissions::class,
 ],
 ```
+Support for localized permission search, you can enter the display name for permission search.
+You can use the artisan command line tool to publish localization files:
+
+```php
+php artisan vendor:publish --provider="Insenseanalytics\LaravelNovaPermission\NovaPermissionServiceProvider"
+```
 
 ## Using Custom Role/Permission Resource Classes
 
