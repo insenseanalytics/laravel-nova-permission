@@ -76,25 +76,6 @@ trait PermissionResourceTrait
     }
 
     /**
-     * Override the applyFilters method to add the guard_name condition when filtering
-     *
-     * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  array  $filters
-     * @return \Illuminate\Database\Eloquent\Builder
-     */
-    protected static function applyFilters(NovaRequest $request, $query, array $filters)
-    {
-        $query = parent::applyFilters($request, $query, $filters);
-        if($model = head($request->__memoized)){
-            $guard_name = $model->guard_name ?? getGuardForModel(get_class($model));
-            $query->where('guard_name', $guard_name);
-        }
-
-        return $query;
-    }
-
-    /**
      * Rewrite the applySearch method to apply translation field search
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
