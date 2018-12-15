@@ -65,38 +65,4 @@ trait PermissionResourceTrait
 			MorphToMany::make($userResource::label(), 'users', $userResource)->searchable(),
 		];
 	}
-
-	/**
-	 * Override the applyFilters method,title field translation
-	 */
-	public function title() {
-
-		return __('laravel-nova-permission::permissions.display_names.'.$this->name);
-	}
-
-	/**
-	 * Rewrite the applySearch method to apply translation field search
-	 *
-	 * @param  \Illuminate\Database\Eloquent\Builder  $query
-	 * @param  string  $search
-	 * @return \Illuminate\Database\Eloquent\Builder
-	 */
-	protected static function applySearch($query, $search)
-	{
-		$trans_search = array_keys(preg_grep("/$search/",array_dot(__('laravel-nova-permission::permissions.display_names'))));
-
-		if (is_numeric($search) && in_array($query->getModel()->getKeyType(), ['int', 'integer'])) {
-			$query->whereKey($search);
-		}
-
-		return $query->where(function ($query) use ($trans_search) {
-			$model = $query->getModel();
-
-			foreach (static::searchableColumns() as $column) {
-				foreach ($trans_search as $search){
-					$query->orWhere($model->qualifyColumn($column), 'like', '%'.$search.'%');
-				}
-			}
-		});
-	}
 }

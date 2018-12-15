@@ -7,9 +7,7 @@ use Spatie\Permission\Models\Permission as SpatiePermission;
 
 class Permission extends Resource
 {
-	use PermissionResourceTrait,TranslationHandelTrait {
-	    TranslationHandelTrait::applyFilters insteadof PermissionResourceTrait;
-    }
+	use PermissionResourceTrait,PermissionSearchTranslationTrait;
 
 	/**
 	 * The model the resource corresponds to.
