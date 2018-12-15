@@ -41,24 +41,24 @@ class Permission extends Resource
 	 */
 	public static $displayInNavigation = false;
 
-    /**
-     * Get the displayable label of the resource.
-     *
-     * @return string
-     */
-    public static function label()
-    {
-        return __('laravel-nova-permission::resources.Permissions');
-    }
+	/**
+	 * Get the displayable label of the resource.
+	 *
+	 * @return string
+	 */
+	public static function label()
+	{
+		return __('laravel-nova-permission::resources.Permissions');
+	}
 
-    /**
-     * Get the displayable singular label of the resource.
-     *
-     * @return string
-     */
-    public static function singularLabel()
-    {
-        return __('laravel-nova-permission::resources.Permission');
-    }
+	/**
+	 * Get the displayable singular label of the resource.
+	 *
+	 * @return string
+	 */
+	public static function singularLabel()
+	{
+		return __('laravel-nova-permission::resources.Permission');
+	}
 
 }
