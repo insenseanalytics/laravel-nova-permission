@@ -2,6 +2,7 @@
 
 namespace Insenseanalytics\LaravelNovaPermission;
 
+use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
@@ -40,18 +41,24 @@ trait PermissionResourceTrait
 		return [
 			ID::make()->sortable(),
 
-			Text::make('Name', 'name')
+			Text::make(__('laravel-nova-permission::permissions.name'), 'name')
 				->rules(['required', 'string', 'max:255'])
 				->creationRules('unique:' . config('permission.table_names.permissions'))
 				->updateRules('unique:' . config('permission.table_names.permissions') . ',name,{{resourceId}}'),
 
-			Select::make('Guard Name', 'guard_name')
+			Text::make(__('laravel-nova-permission::permissions.display_name'),function (){
+				return __('laravel-nova-permission::permissions.display_names.'.$this->name);
+			})->canSee(function (){
+				return is_array(__('laravel-nova-permission::permissions.display_names'));
+			}),
+
+			Select::make(__('laravel-nova-permission::permissions.guard_name'), 'guard_name')
 				->options($guardOptions->toArray())
 				->rules(['required', Rule::in($guardOptions)]),
 
-			DateTime::make('Created At', 'created_at')->exceptOnForms(),
+			DateTime::make(__('laravel-nova-permission::permissions.created_at'), 'created_at')->exceptOnForms(),
 
-			DateTime::make('Updated At', 'updated_at')->exceptOnForms(),
+			DateTime::make(__('laravel-nova-permission::permissions.updated_at'), 'updated_at')->exceptOnForms(),
 
 			BelongsToMany::make($roleResource::label(), 'roles', $roleResource)->searchable(),
 
