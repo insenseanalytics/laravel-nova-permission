@@ -22,9 +22,11 @@ trait PermissionResourceTrait
 	 */
 	public function title() {
 
-		return __('laravel-nova-permission::permissions.display_names.' . $this->name);
+		return array_has(__('laravel-nova-permission::permissions.display_names'),$this->name)
+			? __("laravel-nova-permission::permissions.display_names.{$this->name}")
+			: $this->{static::$title};
 	}
-	
+
 	public static function getModel()
 	{
 		return app(PermissionRegistrar::class)->getPermissionClass();
