@@ -16,6 +16,15 @@ use Spatie\Permission\PermissionRegistrar;
 
 trait PermissionResourceTrait
 {
+
+	/**
+	 * Override the applyFilters method,title field translation
+	 */
+	public function title() {
+
+		return __('laravel-nova-permission::permissions.display_names.' . $this->name);
+	}
+	
 	public static function getModel()
 	{
 		return app(PermissionRegistrar::class)->getPermissionClass();

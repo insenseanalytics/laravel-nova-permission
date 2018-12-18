@@ -7,7 +7,7 @@ use Spatie\Permission\Models\Permission as SpatiePermission;
 
 class Permission extends Resource
 {
-	use PermissionResourceTrait,PermissionSearchTranslationTrait;
+	use PermissionResourceTrait;
 
 	/**
 	 * The model the resource corresponds to.
@@ -58,5 +58,4 @@ class Permission extends Resource
 	{
 		return __('laravel-nova-permission::resources.Permission');
 	}
-
 }

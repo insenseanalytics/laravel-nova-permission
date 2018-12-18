@@ -20,7 +20,7 @@ class ForgetCachedPermissions
 		$response = $next($request);
 
 		if ($request->is('nova-api/*/detach') ||
-			$request->is('nova-api/*/*/attach/*')) {
+			$request->is('nova-api/*/*/attach*/*')) {
 			$permissionKey = (Nova::resourceForModel(app(PermissionRegistrar::class)->getPermissionClass()))::uriKey();
 
 			if ($request->viaRelationship === $permissionKey) {

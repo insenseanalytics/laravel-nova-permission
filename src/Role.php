@@ -7,7 +7,7 @@ use Spatie\Permission\Models\Role as SpatieRole;
 
 class Role extends Resource
 {
-	use RoleResourceTrait, TranslationHandelTrait;
+	use RoleResourceTrait;
 
 	/**
 	 * The model the resource corresponds to.
