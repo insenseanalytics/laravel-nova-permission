@@ -180,12 +180,12 @@ trait PermissionsBasedAuthTrait
 
 	public static function hasPermissionsTo(Request $request, $ability)
 	{
-		if (isset(static::$permissionsForAbilities[$ability])) {
-			return $request->user()->can(static::$permissionsForAbilities[$ability]);
-		}
-
 		if (isset(static::$permissionsForAbilities['all'])) {
 			return $request->user()->can(static::$permissionsForAbilities['all']);
+		}
+
+		if (isset(static::$permissionsForAbilities[$ability])) {
+			return $request->user()->can(static::$permissionsForAbilities[$ability]);
 		}
 
 		return false;
