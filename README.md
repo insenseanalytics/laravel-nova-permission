@@ -134,6 +134,16 @@ The example above means that all actions on this resource can be performed by us
     ];
 ```
 
+### Relationships 
+To allow your users to specify a relationship on your model, you will need to add another permission on the Model. 
+For example, if your `Product` belongs to `User`, add the following permission on `app/Nova/User.php`. : 
+
+```php
+    public static $permissionsForAbilities = [
+      'addProduct' => 'add user on products'
+    ];
+```
+
 ## Contributing
 
 Contributions are welcome and will be fully credited as long as you use PSR-2, explain the issue/feature that you want to solve/add and back your code up with tests. Happy coding!
