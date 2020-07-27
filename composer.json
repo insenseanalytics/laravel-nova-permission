@@ -1,5 +1,5 @@
 {
-    "name": "mukulsmu/laravel-nova-permission",
+    "name": "insenseanalytics/laravel-nova-permission",
     "description": "A Laravel Nova tool for Spatie's Permission library.",
     "keywords": [
         "laravel",
@@ -14,13 +14,13 @@
     },
     "autoload": {
         "psr-4": {
-            "mukulsmu\\LaravelNovaPermission\\": "src/"
+            "insenseanalytics\\LaravelNovaPermission\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "mukulsmu\\LaravelNovaPermission\\NovaPermissionServiceProvider"
+                "insenseanalytics\\LaravelNovaPermission\\NovaPermissionServiceProvider"
             ]
         }
     },
