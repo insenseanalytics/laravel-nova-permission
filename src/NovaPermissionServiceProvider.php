@@ -1,6 +1,6 @@
 <?php
 
-namespace Insenseanalytics\LaravelNovaPermission;
+namespace Mukulsmu\LaravelNovaPermission;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Insenseanalytics\LaravelNovaPermission;
+namespace Mukulsmu\LaravelNovaPermission;
 
 use Laravel\Nova\Nova;
 use Spatie\Permission\PermissionRegistrar;
