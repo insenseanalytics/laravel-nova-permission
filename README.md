@@ -44,7 +44,7 @@ public function tools()
 }
 ```
 
-Next, add `MorphToMany` fields to you `app/Nova/User` resource:
+Next, add `MorphToMany` fields to your `app/Nova/User` resource:
 
 ```php
 use Laravel\Nova\Fields\MorphToMany;
